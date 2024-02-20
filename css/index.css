@@ -40,8 +40,8 @@
   }
   
   .logo img{
-    width: 300px;
-    height: 50px;
+    width: 250px;
+    height: 40px;
   }
   
   .nav-list {
@@ -202,8 +202,8 @@
 
     .contact-us {
       width: 100%;
-      background-color:#000;
-      color: white;
+      background-color:#fff;
+      color: black;
       justify-content: center;
       display: flex;
       flex-direction: column;
@@ -223,15 +223,15 @@
     }
 
     .item img {
-      width: 32px;
-      height: 32px;
-      filter: invert(100%);
+      width: 22px;
+      height: 22px;
       margin-right: 10px;
     }
 
     .item p{
       width: 100%;
       text-align: center;
+      font-size: small;
     }
 
     .about {
@@ -255,33 +255,43 @@
     }
 
     .about-text p{
-      font-weight: 100;
+      font-weight: 300;
       text-align: justify;
+      margin-bottom: 60px;
     }
 
-    .about p{
+    .about p {
       padding-left: 0px;
       padding-right: 0px;
     }
 
-    .about-image-div {
-      display: inline-block;
-      width: 100%;
-      height: 1100px;
-      margin-bottom: 25px;
-      background-color: green;
+    .carroussel {
+      display: grid;
+      grid-auto-flow: column;
+      scroll-behavior:smooth;
+      gap: 1.2rem;
+      overflow-y: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      margin-bottom: 30px;
     }
 
-    .about-image-box {
+    .carroussel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      scroll-snap-align: start;
+      border-radius: 10px;
+      max-height: 450px;
+      min-width: 330px;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      width: 100%;
-      height: 400px;
-      background-color: #121212;
     }
-
-    .about-image-box img {
+  
+    .card img {
       max-height: 100%;
       max-width: 100%;
       object-fit: cover;
