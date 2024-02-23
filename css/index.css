@@ -228,6 +228,10 @@
       margin-right: 10px;
     }
 
+    .item a {
+      text-decoration: none;
+    }
+      
     .item p{
       width: 100%;
       text-align: center;
