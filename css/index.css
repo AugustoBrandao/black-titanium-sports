@@ -8,6 +8,14 @@
   body {
     font-family: 'Saira', sans-serif;
   }
+
+  header {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 75px;
+  }
   
   a {
     font-family: 'Saira', sans-serif;
@@ -28,6 +36,50 @@
   .header {
     background: #000;
     padding-inline: 16px;
+  }
+
+  .contact-us {
+    width: 100%;
+    background-color:#fff;
+    color: black;
+    justify-content: center;
+    display: flex;
+    border: solid 1px white;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .item {
+    display: flex;
+    width: 225px;
+    padding-right: 10px;
+    /* margin: 0 auto 16px auto; */
+  }
+
+  .item:last-child {
+    margin-bottom: 0;
+  }
+
+  .item img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  .anchor {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 300;
+    justify-content: center;
+  }
+
+  .item p{
+    height: 100%;
+    width: 190px;
+    justify-content: center;
+    font-size: small;
   }
   
   .nav {
@@ -60,42 +112,10 @@
     width: 35px;
     height: 25px;
   }
-  
-  .hamburger {
-    display: none;
-    border: none;
-    background: none;
-    border-top: 3px solid #fff;
-    cursor: pointer;
-  }
-  
-  .hamburger::after,
-  .hamburger::before {
-    content: " ";
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: #fff;
-    margin-top: 5px;
-    position: relative;
-    transition: 0.3s;
-  }
 
-  /* .products-box {
-    border: 1px solid #000;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 150px;
-  } */
-
-  /* .product-item {
-    display: inline-block;
-    width: 30%;
-    height: 100%;
-    background-color: black;
-  } */
+  .about {
+    margin-top: 150px;
+  }
 
   .about pp:first-child{
     margin-top: 20px;
@@ -112,6 +132,36 @@
     list-style: none;
     text-align: center;
   }
+
+  .carroussel {
+    display: grid;
+    width: 350px;
+    grid-auto-flow: column;
+    scroll-behavior:smooth;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    scroll-snap-align: start;
+    border-radius: 10px;
+    max-height: 450px;
+    min-width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
 
 /* RESPONSIVIDADE MOBILE */
   @media (max-width: 750px) {
@@ -132,73 +182,6 @@
       padding-left: 0;
       padding-right: 0;
     }
-
-    /* .hamburger {
-      display: block;
-      z-index: 1;
-    } 
-  
-    .nav-list {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 90vw;
-      height: 100vh;
-      background: #000;
-      clip-path: circle(100px at 90% -15%);
-      transition: 1s ease-out;
-  
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      gap: 0;
-  
-      pointer-events: none;
-    }
-  
-    .nav-list a {
-      font-size: 16px;
-      opacity: 0;
-    }
-  
-    .nav-list li:nth-child(1) a {
-      transition: 0.5s 0.2s;
-    }
-  
-    .nav-list li:nth-child(2) a {
-      transition: 0.5s 0.4s;
-    }
-  
-    .nav-list li:nth-child(3) a {
-      transition: 0.5s 0.6s;
-    }
-  
-    .nav.active .nav-list {
-      clip-path: circle(1500px at 90% -15%);
-      pointer-events: all;
-    }
-  
-    .nav.active .nav-list a {
-      opacity: 1;
-    }
-  
-    .nav.active .hamburger {
-      position: fixed;
-      top: 26px;
-      right: 16px;
-      border-top-color: transparent;
-    }
-  
-    .nav.active .hamburger::before {
-      transform: rotate(135deg);
-    }
-  
-    .nav.active .hamburger::after {
-      transform: rotate(-135deg);
-      top: -7px;
-    } 
-
-    */
 
     .contact-us {
       width: 100%;
@@ -228,10 +211,6 @@
       margin-right: 10px;
     }
 
-    .item a {
-      text-decoration: none;
-    }
-      
     .item p{
       width: 100%;
       text-align: center;
@@ -247,15 +226,10 @@
     }
 
     .about {
-      padding-top: 250px;
+      padding-top: 100px;
     }
 
     .section-title {
-      /* font-size: 1.6em;
-      text-align: center;
-      font-weight:600;
-      margin-top: 20px;
-      margin-bottom: 20px; */
       display: none;
     }
 
@@ -330,7 +304,7 @@
 
     .localization p {
       color: #fff;
-      font-weight: 300;
+      font-weight: 100;
       text-align: center;
       padding: 16px;
     }
